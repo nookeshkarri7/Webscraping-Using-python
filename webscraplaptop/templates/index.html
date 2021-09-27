@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+        table, th, td {
+          border: 1px solid rgb(26, 13, 13);
+          border-collapse: collapse;
+          padding: 10px;
+        }
+        th, td {
+          background-color: #1eac31;
+          padding: 10px;
+          color: rgb(255, 255, 255);
+        }
+        
+        a{
+            color:#fff
+        }
+        </style>
+        </head>
+    <body>
+        
+        <table style="width:100%">
+            <tr>
+              <th>Name</th>
+              <th>Store</th> 
+              <th>Price</th> 
+              <th>Buy Link</th>
+            </tr>
+        {% for each in data %}
+            <tr>
+                <td>{{each.title}}</td>
+                <td>{{each.store}}</td>
+                <td>{{each.price}}</td>
+                <td><a target="_blank" href='https://www.flipkart.com{{each.target_link}}'>Buy Now</a></td>
+            
+            </tr>
+           
+            
+           
+            {%endfor%}
+        </table>
+    </body>
+</html>
